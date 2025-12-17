@@ -2,13 +2,13 @@ version: '3.8'
 services:
   tgmeng-api:
     container_name: tgmeng-api  # 指定容器名
-    image: tgmeng/tgmeng-api:latest   # 这里使用的是 Docker Hub 上的镜像，也可以用ghcr上的  ghcr.io/tgmeng-com/tgmeng-api:latest
+    image: jp0id/tgmeng-api:latest   # 这里使用的是 Docker Hub 上的镜像，也可以用ghcr上的  ghcr.io/tgmeng-com/tgmeng-api:latest
     # build:        # 这是使用本地区构建镜像，上面image就是直接用dockerhub的镜像
       # context: .  # 使用当前目录的 Dockerfile
     ports:
-      - "8080:4399"  # 映射主机 8080 端口到容器 4399 端口
+      - "18180:4399"  # 映射主机 18180 端口到容器 4399 端口
     environment:
-      - JAVA_OPTS=-Xms512m -Xmx1024m  # 可选：设置 JVM 参数
+      - JAVA_OPTS=-Xms128m -Xmx128m  # 可选：设置 JVM 参数
     restart: unless-stopped  # 容器异常退出时自动重启，除非手动停止
 
 # 使用
