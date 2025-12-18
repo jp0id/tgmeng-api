@@ -1,7 +1,11 @@
 # 构建阶段
 FROM eclipse-temurin:21-jdk as builder
 #FROM --platform=linux/amd64 eclipse-temurin:21-jdk as builder
-RUN apt-get update && apt-get install -y maven
+RUN apt-get update && \
+    apt-get install -y tzdata && \
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    echo "Asia/Shanghai" > /etc/timezone && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 

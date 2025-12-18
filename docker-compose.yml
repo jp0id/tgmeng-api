@@ -9,6 +9,7 @@ services:
       - "18180:4399"  # 映射主机 18180 端口到容器 4399 端口
     environment:
       - JAVA_OPTS=-Xms128m -Xmx128m  # 可选：设置 JVM 参数
+      - TZ=Asia/Shanghai  # 设置东八区时区
     restart: unless-stopped  # 容器异常退出时自动重启，除非手动停止
 
 # 使用
