@@ -47,7 +47,7 @@ my-config:
       max-size: 5000         #最大缓存条数
       expire-time: 172800       # 通用缓存过期时间 单位是秒,里默认缓存个48小时
   subscription:
-    dir: ./data/subscritions/       # 订阅文件所在的文件夹
+    dir: ./data/subscriptions/       # 订阅文件所在的文件夹
     file-suffix: .json             # 文件后缀
     max-hot-number: 10000          # 每个人最多存10000条
   history:
