@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -24,3 +24,5 @@ jobs:
           context: .
           push: true
           tags: jp0id/tgmeng-api:latest
+
+
