@@ -1,4 +1,4 @@
-FROM openjdk:21-jdk
+FROM eclipse-temurin:21-jdk
 #FROM --platform=linux/amd64 eclipse-temurin:21-jdk
 RUN apt-get update && apt-get install -y maven
 
