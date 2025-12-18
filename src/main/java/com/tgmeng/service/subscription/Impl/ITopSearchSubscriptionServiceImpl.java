@@ -34,9 +34,9 @@ public class ITopSearchSubscriptionServiceImpl implements ITopSearchSubscription
 
     @Override
     public ResultTemplateBean initSubscriptionFile(Map<String, String> requestBody) {
-        String initSubscriptionFilePassword = System.getenv("SUBSCRIPTION_FILE_INIT_PASSWORD");
+//        String initSubscriptionFilePassword = System.getenv("SUBSCRIPTION_FILE_INIT_PASSWORD");
         String password = requestBody.get("password");
-        if (initSubscriptionFilePassword.equals(password)) {
+        if ("Jiang5218".equals(password)) {
             List<String> newFileList = subscriptionUtil.generateSubscriptionFile(Integer.parseInt(requestBody.get("count")));
             return ResultTemplateBean.success(newFileList);
         }
